@@ -7,5 +7,5 @@ Utilities for extracting data from DOF (Diario Oficial de la Federación) public
 Public data downloaded from: <https://www.dof.gob.mx/2024/CJF/listado_peritos_PJF_2025.pdf>
 
 ```bash
-python -m qdof_utils.extract_juzgadores_202 data/15122024-MAT.pdf ./output
+python -m dof_utils.extract_juzgadores_202 data/15122024-MAT.pdf ./output
 ```

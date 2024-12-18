@@ -24,7 +24,7 @@ jobs:
 
       - name: Generate files
         run: |
-          python -m qdof_utils.extract_juzgadores_202 data/15122024-MAT.pdf ./output
+          python -m dof_utils.extract_juzgadores_202 data/15122024-MAT.pdf ./output
 
       - name: Upload Release Assets
         env:
