@@ -3,6 +3,7 @@ name: Release Juzgadores 2024-2025 data
 on:
   release:
     types: [created]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -24,7 +25,7 @@ jobs:
 
       - name: Generate files
         run: |
-          python -m dof_utils.extract_juzgadores_202 data/15122024-MAT.pdf ./output
+          python -m dof_utils.extract_juzgadores data/15122024-MAT.pdf ./output
 
       - name: Upload Release Assets
         env:
