@@ -28,10 +28,8 @@ jobs:
           python -m dof_utils.extract_juzgadores data/15122024-MAT.pdf ./output
 
       - name: Upload Release Assets
+        run: |
+          tar -czf datos.tar.gz -C output .
+          gh release upload ${{ github.event.release.tag_name }} datos.tar.gz --clobber
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          files=$(find output -type f)
-          for file in $files; do
-            gh release upload ${{ github.event.release.tag_name }} "$file" --clobber
-          done
